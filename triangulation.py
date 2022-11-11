@@ -83,7 +83,10 @@ for r in result:
 print(len(val))
 print(val)
 
-plot_implicit(Or(eq_0,eq_1,eq_2),line_color='green',markers=[{'args':[point0_x,point0_y],'color':"black",'marker':"o",'ms':3},
+x = Symbol('x')
+y = Symbol('y')
+
+plot_implicit(Or(eq_0,eq_1,eq_2),(x,-10,10),(y,-10,10),line_color='green',markers=[{'args':[point0_x,point0_y],'color':"black",'marker':"o",'ms':3},
 {'args':[point1_x,point1_y],'color':"black",'marker':"o",'ms':3},
 {'args':[point2_x,point2_y],'color':"black",'marker':"o",'ms':3},
 {'args':[pointMid_x,pointMid_y],'color':"blue",'marker':"o",'ms':2},
