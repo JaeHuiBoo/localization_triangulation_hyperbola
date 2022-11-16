@@ -86,6 +86,19 @@ print(val)
 x = Symbol('x')
 y = Symbol('y')
 
+plot_eq = plot_implicit(Or(eq_0,eq_1,eq_2),(x,-10,10),(y,-10,10),line_color='green',show=False)
+plot_points = plot_implicit((x,-10,10),(y,-10,10),markers=[{'args':[point0_x,point0_y],'color':"black",'marker':"o",'ms':3},
+{'args':[point1_x,point1_y],'color':"black",'marker':"o",'ms':3},
+{'args':[point2_x,point2_y],'color':"black",'marker':"o",'ms':3},
+{'args':[pointMid_x,pointMid_y],'color':"blue",'marker':"o",'ms':2},
+{'args':[pointMid0_x,pointMid0_y],'color':"black",'marker':"o",'ms':2},
+{'args':[pointMid1_x,pointMid1_y],'color':"black",'marker':"o",'ms':2},
+{'args':[pointMid2_x,pointMid2_y],'color':"black",'marker':"o",'ms':2}], show=False)
+
+plot_eq.append(plot_points[2])
+plot_eq.show()
+
+"""
 plot_implicit(Or(eq_0,eq_1,eq_2),(x,-10,10),(y,-10,10),line_color='green',markers=[{'args':[point0_x,point0_y],'color':"black",'marker':"o",'ms':3},
 {'args':[point1_x,point1_y],'color':"black",'marker':"o",'ms':3},
 {'args':[point2_x,point2_y],'color':"black",'marker':"o",'ms':3},
@@ -98,3 +111,5 @@ plot_implicit(Or(eq_0,eq_1,eq_2),(x,-10,10),(y,-10,10),line_color='green',marker
 {'args':[val[4],val[5]],'color':"red",'marker':"o",'ms':2},
 {'args':[val[6],val[7]],'color':"red",'marker':"o",'ms':2}
 ])
+
+"""
